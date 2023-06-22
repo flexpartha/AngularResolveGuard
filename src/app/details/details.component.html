@@ -1,0 +1,30 @@
+<div>
+
+    <div class="card" style="margin: 30px auto">
+  
+      <div class="card-body">
+  
+        <div class="row">
+          <div class="col-md-4">
+            <img src="{{movieDetails['Poster']}}" class="card-img-top" style="width: 300px;">
+          </div>
+          <div class="col-md-8">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home/']">
+                  <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-chevron-left"></i>Back</button>
+                </a>
+              </li>
+            </ul>
+            <h5 class="card-title">{{movieDetails['Title']}} ({{movieDetails['Year']}})</h5>
+            <p class="card-text">{{movieDetails['Plot']}}</p>
+            <p class="card-text"><strong>Genre</strong>: {{movieDetails['Genre']}}</p>
+            <p class="card-text"><strong>IMDB Rating</strong>: {{movieDetails['imdbRating']}}</p>
+            <span class="card-text" style="display: flex;"><strong>Ratings</strong>: <ul style="list-style-type: none;"><li *ngFor="let itemSource of ratingsValue" >{{itemSource.Source}} ---  <span [ngClass]="{'itmsource': itemSource.Value}">{{itemSource.Value}}</span></li></ul></span>
+            <p class="card-text"><strong>Released</strong>: {{movieDetails['Released']}}</p>
+            <p class="card-text"><strong>Actors</strong>: {{movieDetails['Actors']}}</p>
+          </div>
+        </div>
+      </div>
+  
+    </div>

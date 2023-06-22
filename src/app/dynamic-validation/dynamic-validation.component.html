@@ -1,0 +1,12 @@
+<form [formGroup]="dummyForm">
+    <label>Country::--</label>
+    <select id="country" formControlName="country" (change)="onCountryChanged()">
+        <option value="A">Country A</option>
+        <option value="B">Country B</option>
+    </select>
+    <br>
+    <br>
+    <label>Country::--</label>
+    <input type="text" id="country" formControlName="county">
+    <span>Required:{{dummyForm.get('county').hasError('required')}}</span>
+</form>

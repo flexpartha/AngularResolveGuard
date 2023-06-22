@@ -1,0 +1,33 @@
+<div class="m-4">
+    <form [formGroup]="customForm" (ngSubmit)="saveForm()">
+        <div class="mb-3">
+            <label class="form-label" for="inputEmail">UserName</label>
+            <input type="text" class="form-control" formControlName="usernm"  placeholder="username">
+            <div class="alert  alert-danger" *ngIf="(customForm.get('usernm').dirty || customForm.get('usernm').touched) && customForm.get('usernm').invalid">
+                Please provide your Alpha Numeric username.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="websiteUrl">WebsiteUrl</label>
+            <input type="text" class="form-control" formControlName="websiteUrl"  placeholder="Link Url">
+            <div class="alert  alert-danger" *ngIf="(customForm.get('websiteUrl').dirty || customForm.get('websiteUrl').touched) && customForm.get('websiteUrl').invalid">
+                Only URLs served over HTTPS and from th e .com top-level domain are accepted.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="websiteUrl">ConsumerId</label>
+            <input type="text" class="form-control" formControlName="consumerId"  placeholder="Consumer Id">
+            <div class="alert  alert-danger" *ngIf="(customForm.get('consumerId').dirty || customForm.get('consumerId').touched) && customForm.get('consumerId').invalid">
+                Please provide Numeric value.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="age">Enter Age</label>
+            <input type="number" class="form-control" formControlName="age"  placeholder="Enter Age">
+            <div class="alert  alert-danger" *ngIf="customForm.get('age').dirty && customForm.get('age').errors && customForm.get('age').errors.ageRange ">
+                Age should be in between 18 to 45 years
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

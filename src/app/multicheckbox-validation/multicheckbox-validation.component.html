@@ -1,0 +1,45 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+    <!-- Form elements goes here -->
+    <div *ngFor="let data of Data; let i=index">
+        <label>
+          <input type="checkbox" [value]="data.value" (change)="onCheckboxChange($event)" />
+          {{data.name}}
+        </label>
+      </div>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<div class="row">
+    <div class="col-md-9">
+      <table class="table table-bordered table-striped" >
+        <thead>
+          <tr>
+          <th>Id</th>
+          <th>Email</th>
+          <th>FirstNmae</th>
+          <th>LastName</th>
+          <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let pagedata of jsonData">
+            <td>{{pagedata.id}}</td>
+            <td>{{pagedata.email}}</td>
+            <td>{{pagedata.first_name}}</td>
+            <td>{{pagedata.last_name}}</td>
+            <td><img src ="{{pagedata.avatar}}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-3">
+        <button type="button" class="btn btn-primary"
+         (click)="goToPreviousPage()">Prev</button>
+      </div>
+      <div class="col-md-3">
+        <button type="button" class="btn btn-primary" 
+        (click)="goToNext()">Next</button>
+      </div>
+  </div>

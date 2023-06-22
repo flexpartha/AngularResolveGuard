@@ -1,0 +1,126 @@
+<div>
+
+    <div class="card" style="width: 50%; margin: 30px auto">
+      <div class="card-body">
+        <h5 class="card-title">Movie Details</h5>
+        <p class="card-text">Click on links below to get Movie details</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <a [routerLink]="['/details/tt0175142']">Scary Movie</a>
+        </li>
+        <li class="list-group-item">
+          <a [routerLink]="['/details/tt0257106']">Scary Movie 2</a>
+        </li>
+        <li class="list-group-item">
+          <a [routerLink]="['/details/tt0306047']">Scary Movie 3</a>
+        </li>
+        <li class="list-group-item">
+          <a [routerLink]="['/details/tt0362120']">Scary Movie 4</a>
+        </li>
+        <li class="list-group-item">
+          <a [routerLink]="['/details/tt0362']">Scary Movie 5</a>
+        </li>
+        <li class="list-group-item">
+          <a [routerLink]="['/form-array']">FormArraySection</a>
+        </li>
+        <li class="list-group-item">
+          <a [routerLink]="['/dynamic-validation']">DynamicValidation</a>
+        </li>
+        <li class="list-group-item">
+          <a [routerLink]="['/multicheck-validation']">Multicheck-validation</a>
+        </li>
+        <li class="list-group-item">
+          <a [routerLink]="['/custom-validation']">Custom-validation</a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Products</button>
+      <div class="dropdown-menu">
+          <div class="dropdown-header">ELECTRONICS</div>
+          <a  class="dropdown-item">Mobiles</a>
+          <a  class="dropdown-item">Tablets</a>
+          <a class="dropdown-item">Laptops</a>
+          <div class="dropdown-header">FASHION</div>
+          <a  class="dropdown-item">Clothing</a>
+          <a  class="dropdown-item">Sunglasses</a>
+      </div>
+  </div> -->
+  <!-- <div>
+    <select 
+          
+          class="form-control selectpicker" 
+          [ngClass]="{'btn-primary':name1 =='Lorem','btn-warning':name1 =='Parturient','btn-danger':name1 =='Euismod'}"
+            (change)='onOptionsSelected1($event)'>
+          <option  *ngFor="let textvalue of selectList" 
+           
+          [value]="textvalue.id" [selected] ="textvalue.id==1">{{textvalue.text}}</option>
+        </select> 
+  </div>  -->
+  <!-- <form [formGroup]="arrayForm"> -->
+    
+    <div class="row">
+      <!-- <div class="col-md-3">
+        <ul style="list-style-type: none;">
+          <li *ngFor="let source of statusValue" style="border-bottom:1px solid red;display: flex;justify-content: space-between;">{{source.name}}
+            <div>
+              <select 
+                    
+                    class="form-control" 
+                    [ngClass]="{'btn-primary':source.name ==='Completed','btn-warning':source.name ==='InProgress','btn-danger':source.name ==='NotStarted'}"
+                    id="selectTxt2"  (change)='onOptionsSelected($event)'>
+                    <option  *ngFor="let textvalue of statusValue"
+                    [value]="textvalue.id" [selected] ="textvalue.id==source.id">{{textvalue.name}}</option>
+                  </select> 
+            </div> 
+          </li>
+        </ul>
+      </div> -->
+      <!-- <div class="col-md-2">
+        <ul style="list-style-type: none;">
+          <li *ngFor="let source of typeValye">{{source.name}}</li>
+        </ul>
+      </div> -->
+      <!-- <div class="col-md-9"> -->
+        <!-- <ul style="list-style-type: none;">
+          <li *ngFor="let sourceStatus of insertItemArr; let i=index" style="border-bottom:1px solid red;display: flex;justify-content: space-between;">{{sourceStatus.description}}{{(i)}}
+            <div>
+              <select 
+                    formControlName="selectTxt"
+                    class="form-control"
+                    id="selectTxt2"  (change)='onOptionsSelected($event)'>
+                    <option  *ngFor="let textvalue of statusValue; let i = index"
+                    [selected]='i==1'
+                    [value]="textvalue.id">{{textvalue.name}}</option>
+                  </select> 
+            </div> 
+          </li>
+        </ul> -->
+      <!-- </div> -->
+    </div>
+  <!-- </form> -->
+  <!-- <span>{{name1}}</span>
+  <span>{{tickLength}}</span>
+  <span>{{ticketStatus}}</span> -->
+</div>
+<!-- <div class="row">
+  <div class="col-md-4">
+    <ul style="list-style-type: none;">
+      <li *ngFor="let source of statusValue" style="border-bottom:1px solid red;">{{source.name}}
+        
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <ul style="list-style-type: none;">
+      <li *ngFor="let source of typeValye">{{source.name}}</li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <ul style="list-style-type: none;">
+      <li *ngFor="let sourceStatus of ticketValue">{{sourceStatus.status}}</li>
+    </ul>
+  </div>
+</div> -->
